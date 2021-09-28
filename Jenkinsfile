@@ -9,7 +9,7 @@ options { buildDiscarder(logRotator(numToKeepStr: '1')) }
         }
         stage('Maven build') {
             steps {
-                sh 'clean package cobertura:cobertura -Dcobertura.report.format=xml'
+                sh 'clean package'
             }
         }
  stage('Sonarqube') {
